@@ -25,7 +25,7 @@ export default function Searchbar() {
         <input
           onChange={(e) => search(e)}
           value={query}
-          className="focus:outline-none"
+          className="focus:outline-none text-black"
           type="text"
           placeholder="Search..."
         />
@@ -34,7 +34,7 @@ export default function Searchbar() {
         {query != "" && (
         searchResult.length > 0 ? (
           <ul 
-          className="p-2 overflow-y-scroll max-h-40 border-2 border-blue-500 mt-1">
+          className="p-2 text-black overflow-y-scroll max-h-40 border-2 border-blue-500 mt-1">
             {searchResult.map((product, i) => (
               <li key={i}>
                 <ProductResult product={product} />
@@ -42,7 +42,7 @@ export default function Searchbar() {
             ))}
           </ul>
         ) : (
-          <div className="border-2 border-blue-300 rounded-lg p-2 mt-2">
+          <div className="border-2 border-blue-300 rounded-lg p-2 mt-2 text-black">
             Nothing found...
           </div>
         ))}
